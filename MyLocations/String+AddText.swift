@@ -1,0 +1,20 @@
+//
+//  String+AddText.swift
+//  MyLocations
+//
+//  Created by Daniel Janes on 12/26/20.
+//
+
+import Foundation
+import UIKit
+
+extension String {
+    mutating func add(text: String?, separatedBy separator: String = "") {
+        if let text = text {
+            if !isEmpty {
+                self += separator
+            }
+            self += text
+        }
+    }
+}
