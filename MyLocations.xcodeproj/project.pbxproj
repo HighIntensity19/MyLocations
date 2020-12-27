@@ -14,6 +14,7 @@
 		380B79E625906DFF009BB1F4 /* MyLocations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 380B79E425906DFF009BB1F4 /* MyLocations.xcdatamodeld */; };
 		380B79E825906E00009BB1F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380B79E725906E00009BB1F4 /* Assets.xcassets */; };
 		380B79EB25906E00009BB1F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380B79E925906E00009BB1F4 /* LaunchScreen.storyboard */; };
+		381C1A3A259813DC00E525AE /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C1A39259813DC00E525AE /* UIImage+Resize.swift */; };
 		388098C12593D38B00D30AAE /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388098C02593D38B00D30AAE /* HudView.swift */; };
 		388098C52593E1F000D30AAE /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388098C42593E1F000D30AAE /* Functions.swift */; };
 		388098CA2594649900D30AAE /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388098C82594649900D30AAE /* Location+CoreDataClass.swift */; };
@@ -35,6 +36,7 @@
 		380B79E725906E00009BB1F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		380B79EA25906E00009BB1F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		380B79EC25906E00009BB1F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		381C1A39259813DC00E525AE /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		388098C02593D38B00D30AAE /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		388098C42593E1F000D30AAE /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		388098C82594649900D30AAE /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				380B79E725906E00009BB1F4 /* Assets.xcassets */,
 				380B79E925906E00009BB1F4 /* LaunchScreen.storyboard */,
 				380B79EC25906E00009BB1F4 /* Info.plist */,
+				381C1A39259813DC00E525AE /* UIImage+Resize.swift */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				38A577EB2596D4240093460E /* LocationsViewController.swift in Sources */,
 				388098CB2594649900D30AAE /* Location+CoreDataProperties.swift in Sources */,
 				38A577F4259711400093460E /* MapViewController.swift in Sources */,
+				381C1A3A259813DC00E525AE /* UIImage+Resize.swift in Sources */,
 				38A577F02596DE060093460E /* LocationCell.swift in Sources */,
 				380B79E625906DFF009BB1F4 /* MyLocations.xcdatamodeld in Sources */,
 				380B79DE25906DFF009BB1F4 /* SceneDelegate.swift in Sources */,

@@ -10,7 +10,8 @@ import UIKit
 class LocationCell: UITableViewCell {
     
     @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var addressLabel: UILabel! 
+    @IBOutlet var addressLabel: UILabel!
+    @IBOutlet var photoImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -50,7 +51,15 @@ class LocationCell: UITableViewCell {
         } else {
             addressLabel.text = String(format: "Lat: %.8f, Long: %.8f", location.latitude, location.longitude)
         }
-
+        
+        photoImageView.image = thumbnail(for: location)
+    }
+    
+    func thumbnail(for location: Location) -> UIImage {
+        if location.hasPhoto, let image = location.photoImage {
+            return image.resized(withBounds: CGSize(width: 52, height: 52))
+        }
+        return UIImage()
     }
 
 }

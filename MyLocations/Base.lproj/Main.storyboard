@@ -187,8 +187,18 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kGV-0c-6Ns">
+                                                    <rect key="frame" x="106" y="10" width="234" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="yfy-EB-Tc2"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="kGV-0c-6Ns" firstAttribute="leading" secondItem="ITR-ML-GZL" secondAttribute="trailing" constant="10" id="4BF-Le-VBG"/>
+                                                <constraint firstAttribute="bottom" secondItem="kGV-0c-6Ns" secondAttribute="bottom" constant="10" id="GE7-sA-ygu"/>
+                                                <constraint firstItem="kGV-0c-6Ns" firstAttribute="top" secondItem="ILM-dn-6hC" secondAttribute="top" constant="10" id="WyO-rE-dnp"/>
+                                                <constraint firstAttribute="trailing" secondItem="kGV-0c-6Ns" secondAttribute="trailing" constant="8" id="eDC-Bf-piu"/>
                                                 <constraint firstItem="ITR-ML-GZL" firstAttribute="leading" secondItem="ILM-dn-6hC" secondAttribute="leadingMargin" id="oBI-kU-F27"/>
                                                 <constraint firstItem="ITR-ML-GZL" firstAttribute="centerY" secondItem="ILM-dn-6hC" secondAttribute="centerY" id="pcn-dJ-jXC"/>
                                             </constraints>
@@ -320,10 +330,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhotoLabel" destination="ITR-ML-GZL" id="YT3-j0-UDV"/>
                         <outlet property="addressLabel" destination="HKA-su-XAy" id="omq-tA-Gb8"/>
                         <outlet property="categoryLabel" destination="Ox7-MJ-dpa" id="g7K-rL-Wg7"/>
                         <outlet property="dateLabel" destination="hYd-Ip-XeV" id="2AX-Hs-92h"/>
                         <outlet property="descriptionTextView" destination="Hma-pV-gRo" id="lW2-EC-omk"/>
+                        <outlet property="imageHeight" destination="yfy-EB-Tc2" id="ASg-fC-G0U"/>
+                        <outlet property="imageView" destination="kGV-0c-6Ns" id="y5o-Ml-nlu"/>
                         <outlet property="latitudeLabel" destination="Xwe-t8-9Ez" id="qq3-nj-qvh"/>
                         <outlet property="longitudeLabel" destination="RW7-JV-j5N" id="eGd-kD-cZj"/>
                     </connections>
@@ -391,31 +404,41 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyD-Gn-6Mr">
-                                            <rect key="frame" x="16" y="4" width="343" height="20"/>
+                                            <rect key="frame" x="76" y="4" width="283" height="20"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9t-fz-oOF">
-                                            <rect key="frame" x="16" y="28" width="343" height="17"/>
+                                            <rect key="frame" x="76" y="28" width="283" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N1A-6u-8bv">
+                                            <rect key="frame" x="16" y="6" width="52" height="52"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="52" id="7ww-B2-07T"/>
+                                                <constraint firstAttribute="height" constant="52" id="hSc-hW-0CD"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="m9t-fz-oOF" secondAttribute="trailing" constant="16" id="AYJ-8z-tXg"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="m9t-fz-oOF" secondAttribute="bottom" id="CfV-e2-3Jd"/>
                                         <constraint firstAttribute="trailing" secondItem="MyD-Gn-6Mr" secondAttribute="trailing" constant="16" id="Jft-vX-H0e"/>
                                         <constraint firstItem="m9t-fz-oOF" firstAttribute="top" secondItem="MyD-Gn-6Mr" secondAttribute="bottom" constant="4" id="Joq-VZ-h0q"/>
-                                        <constraint firstItem="MyD-Gn-6Mr" firstAttribute="leading" secondItem="xaO-p8-95l" secondAttribute="leading" constant="16" id="LXP-HN-cGw"/>
-                                        <constraint firstItem="m9t-fz-oOF" firstAttribute="leading" secondItem="xaO-p8-95l" secondAttribute="leading" constant="16" id="lHz-rL-C1z"/>
+                                        <constraint firstItem="m9t-fz-oOF" firstAttribute="leading" secondItem="N1A-6u-8bv" secondAttribute="trailing" constant="8" symbolic="YES" id="R4q-yo-XDv"/>
+                                        <constraint firstItem="N1A-6u-8bv" firstAttribute="top" secondItem="xaO-p8-95l" secondAttribute="top" constant="6" id="Y6J-F7-ZUJ"/>
+                                        <constraint firstItem="MyD-Gn-6Mr" firstAttribute="leading" secondItem="N1A-6u-8bv" secondAttribute="trailing" constant="8" symbolic="YES" id="lqO-lU-x4w"/>
                                         <constraint firstItem="MyD-Gn-6Mr" firstAttribute="top" secondItem="xaO-p8-95l" secondAttribute="top" constant="4" id="ogZ-ik-mQN"/>
+                                        <constraint firstItem="N1A-6u-8bv" firstAttribute="leading" secondItem="xaO-p8-95l" secondAttribute="leading" constant="16" id="wb4-bF-rfk"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addressLabel" destination="m9t-fz-oOF" id="xBN-xH-XNs"/>
                                     <outlet property="descriptionLabel" destination="MyD-Gn-6Mr" id="avN-la-EFs"/>
+                                    <outlet property="photoImageView" destination="N1A-6u-8bv" id="OVR-8e-2NL"/>
                                     <segue destination="Zxm-MB-kl9" kind="show" identifier="EditLocation" id="3EG-8g-mG2"/>
                                 </connections>
                             </tableViewCell>
@@ -553,7 +576,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Yoz-fU-eHX"/>
+        <segue reference="3EG-8g-mG2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
